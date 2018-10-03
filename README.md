@@ -63,3 +63,17 @@ while ((m = regex.exec(input || null)) !== null) {
   // ...
 }
 ```
+
+Also, probably you already learnt that `||` is a logical operator to execute the operation `or`. But, what you would probably didn't know is that the result of a operation that uses the operator `||` will not be necessarily a boolean value like `true` or `false`.
+
+For a better understanding, execute the code below:
+
+```js
+let userName = 'Jo';
+
+let me = {
+  name: userName || null
+}
+
+console.log(me);
+```
