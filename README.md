@@ -40,3 +40,5 @@ Or you can use the next snippet inside your code, just changing the time:
 ```js
 await ((delay) => new Promise(resolve => setTimeout(resolve, delay)))(5000);
 ```
+
+## How the or operator (`||`) works
