@@ -83,3 +83,4 @@ You will see the content of the object `me`:
   name: 'Jo'
 }
 ```
+Because we used the operator `||`, JavaScript has evaluated the expression from left to right.
