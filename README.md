@@ -118,4 +118,4 @@ The resul will be:
   name: null
 }
 ```
-That's because when a empty string is evaluated in a boolean expression it will result `false`.
+That's because when a empty string is evaluated in a boolean expression it will result `false`. So, the last value at the expression will be assigned to the attribute: `null`.
