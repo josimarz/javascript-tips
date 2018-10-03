@@ -21,3 +21,22 @@ async function testSleep() {
 testSleep();
 ```
 If you execute the example, the string `"We're thousands miles from confort..."` will be executed after 5 seconds. Notice that we used the `await` operator. It means that the script execution will stopped until `sleep` function ends. To use the `await` operator, the function where the operator is used should be declared with `async` operator.
+
+If you like arrow function and write less you'll like the next example:
+
+```js
+let sleep = (delay) => new Promise(resolve => setTimeout(resolve, delay));
+
+async function testSleep() {
+  await sleep(5000); // sleep for 5 seconds
+  console.log("We're a thousands miles from confort...");
+}
+
+testSleep();
+```
+
+Or you can use the next snippet inside your code, just changing the time:
+
+```js
+await ((delay) => new Promise(resolve => setTimeout(resolve, delay)))(5000);
+```
