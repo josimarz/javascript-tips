@@ -95,3 +95,27 @@ let me = {
 
 console.log(me);
 ```
+For that code the result is:
+```js
+{
+  name: 'Josimar'
+}
+```
+But, if we make a bit change...
+```js
+let userName = false;
+let name = ''; // a empty string
+
+let me = {
+  name: userName || name || null
+}
+
+console.log(me);
+```
+The resul will be:
+```js
+{
+  name: null
+}
+```
+That's because when a empty string is evaluated in a boolean expression it will result `false`.
