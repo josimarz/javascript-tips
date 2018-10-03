@@ -77,3 +77,9 @@ let me = {
 
 console.log(me);
 ```
+You will see the content of the object `me`:
+```js
+{
+  name: 'Jo'
+}
+```
