@@ -83,4 +83,15 @@ You will see the content of the object `me`:
   name: 'Jo'
 }
 ```
-Because we used the operator `||`, JavaScript has evaluated the expression from left to right.
+Because we used the operator `||`, JavaScript has evaluated the expression from left to right and when it founds something true, it stopped the evaluation and returned the first true found value. Confusing? Let's write other example:
+
+```js
+let userName = false;
+let name = 'Josimar';
+
+let me = {
+  name: userName || name || null
+}
+
+console.log(me);
+```
