@@ -20,4 +20,4 @@ async function testSleep() {
 
 testSleep();
 ```
-If you execute the example, the string `"We're thousands miles from confort..."` will be executed after 5 seconds.
+If you execute the example, the string `"We're thousands miles from confort..."` will be executed after 5 seconds. Notice that we used the `await` operator. It means that the script execution will stopped until `sleep` function ends. To use the `await` operator, the function where the operator is used should be declared with `async` operator.
