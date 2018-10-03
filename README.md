@@ -15,8 +15,9 @@ function sleep(delay) {
 
 async function testSleep() {
   await sleep(5000); // sleep for 5 seconds
-  console.log('We're a thousands miles from confort...');
+  console.log("We're a thousands miles from confort...");
 }
 
 testSleep();
 ```
+If you execute the example, the string `"We're thousands miles from confort..."` will be executed after 5 seconds.
