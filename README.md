@@ -42,3 +42,24 @@ await ((delay) => new Promise(resolve => setTimeout(resolve, delay)))(5000);
 ```
 
 ## How the or operator (`||`) works
+
+Probably you already seen something like this:
+
+```js
+let userName = 'Jo';
+
+let me = {
+  name: userName || null
+}
+```
+
+Or like this:
+
+```js
+let regex = /(#[\w_\-\.]+)|(@[\w_\-\.]+)/g;
+let m;
+
+while ((m = regex.exec(input || null)) !== null) {
+  // ...
+}
+```
