@@ -120,6 +120,6 @@ The resul will be:
 ```
 That's because when a empty string is evaluated in a boolean expression it will result `false`. So, the last value at the expression will be assigned to the attribute: `null`.
 
-## Searching and aggregate on MongoDB collection using local date
+## Vue.js
 
-Recently, I had a problem to aggregate by date a set of documents in a MongoDB. The search returned 948 documents that were created at November 5 2018. The documents were created by a user from Brazil. So, the documents were saved with UTC time. Four documents
+### Using $nextTick built-in function
