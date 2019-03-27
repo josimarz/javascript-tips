@@ -143,3 +143,15 @@ onClick: function () {
 The code above will raise the folow exception: "Cannot read property 'focus' of undefined". This happens because the element named `myInput` wasn't found, even though the property `showInput` was turned true. However the DOM wasn't updated yet.
 
 To solve this, we can use the built-in function `$nextTick`. According to official Vue [documentation](https://vuejs.org/v2/api/#Vue-nextTick), this function receives a callback function that is executed after next DOM update cycle.
+
+Therefore, we can change the above function like this:
+
+```js
+onClick: function () {
+  this.showInput = true // I want to show the input
+  // wait for next update cycle before focus the element
+  this.$nextTick(() => {
+    this.$refs.myInput.focus()
+  })
+}
+```
