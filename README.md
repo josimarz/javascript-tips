@@ -140,3 +140,4 @@ onClick: function () {
   this.$refs.myInput.focus() // I want to focus the input
 }
 ```
+The code above will raise the folow exception: "Cannot read property 'focus' of undefined"
