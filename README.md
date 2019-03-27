@@ -132,3 +132,11 @@ In the same day that I'm writing this tip, I faced a problem with Vue.js. For a 
   <div contenteditable="true" ref="myInput" v-if="showInput"></div>
 </div>
 ```
+My function `onClick` is something like this:
+```js
+onClick: function () {
+  this.showInput = true // I want to show the input
+  // the next line raises a exception
+  this.$refs.myInput.focus() // I want to focus the input
+}
+```
