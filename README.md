@@ -123,3 +123,9 @@ That's because when a empty string is evaluated in a boolean expression it will 
 ## Vue.js
 
 ### Using $nextTick built-in function
+
+In the same day that I'm writing this tip, I faced a problem with Vue.js. For a better explanation, look at the Vue.js template below:
+
+```vue
+<div></div>
+```
