@@ -127,5 +127,8 @@ That's because when a empty string is evaluated in a boolean expression it will 
 In the same day that I'm writing this tip, I faced a problem with Vue.js. For a better explanation, look at the Vue.js template below:
 
 ```vue
-<div></div>
+<div>
+  <button v-on:click="onClick()">Click here</button>
+  <div contenteditable="true" ref="myInput" v-if="showInput"></div>
+</div>
 ```
