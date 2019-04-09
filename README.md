@@ -164,6 +164,22 @@ argentina.titles.worldcup = 2
 argentina.titles.americacup = 14
 ```
 
+Also, you can create your own clone function using the concept of recursion:
+
+```js
+const cloneObject = (obj) => {
+  let clone = {};
+  for(let i in obj) {
+    if(obj[i] !== null && typeof(obj[i]) === 'object') {
+      clone[i] = cloneObject(obj[i]);
+      continue
+    }
+    clone[i] = obj[i]
+  }
+  return clone
+}
+
+```
 ## Vue.js
 
 ### Using $nextTick built-in function
