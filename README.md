@@ -122,7 +122,47 @@ That's because when a empty string is evaluated in a boolean expression it will 
 
 ### Be careful using Object.assign
 
-Probabily we had used the `Object.assign` function to create a clone of an object. But, what you propabily didn't is that this function doesn't make a deep clone of a object. For a better explanation, look at this code snippet
+Probabily we had used the `Object.assign` function to create a clone of an object. But, what you propabily didn't is that this function doesn't make a deep clone of a object. For a better explanation, look at this code snippet:
+
+```js
+let brazil = {
+  name: 'Brazil',
+  confederation: 'CBF',
+  titles: {
+    worldcup: 5,
+    americacup: 8
+  }
+}
+let argentina = Object.assign({}, brazil)
+argentina.name = 'Argentina'
+argentina.confederation: 'AFA'
+argentina.titles.worldcup = 2
+argentina.titles.americacup = 14
+console.log(argentina.name) // will print 'Argentina'
+console.log(brazil.name) // will print 'Brazi'
+console.log(argentina.titles.worldcup) // will print '2'
+console.log(brazil.titles.worldcup) // will print '2'! OMG! We lost three titles
+console.log(argentina.titles.americacup) // will print '14'
+console.log(brazil.titles.americacup) // will print '14'!
+```
+
+So, if you want to make a deep copy of an object, you should use another way. You can combine two JSON functions: `parse` and `stringify`. First convert the object to be cloned to string. After that, parse the string to JSON again. Let's recover our World Cup titles:
+
+```js
+let brazil = {
+  name: 'Brazil',
+  confederation: 'CBF',
+  titles: {
+    worldcup: 5,
+    americacup: 8
+  }
+}
+let argentina = JSON.parse(JSON.stringify(brazil))
+argentina.name = 'Argentina'
+argentina.confederation: 'AFA'
+argentina.titles.worldcup = 2
+argentina.titles.americacup = 14
+```
 
 ## Vue.js
 
