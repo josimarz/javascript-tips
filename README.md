@@ -170,7 +170,7 @@ Also, you can create your own clone function using the concept of recursion:
 const cloneObject = (obj) => {
   let clone = {};
   for(let i in obj) {
-    if(obj[i] !== null && typeof(obj[i]) === 'object') {
+    if(obj[i] !== null && typeof obj[i] === 'object') {
       clone[i] = cloneObject(obj[i])
       continue
     }
