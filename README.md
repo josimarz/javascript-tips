@@ -120,6 +120,10 @@ The resul will be:
 ```
 That's because when a empty string is evaluated in a boolean expression it will result `false`. So, the last value at the expression will be assigned to the attribute: `null`.
 
+### Be careful using Object.assign
+
+Probabily we had used the `Object.assign` function to create a clone of an object. But, what you propabily didn't is that this function doesn't make a deep clone of a object. For a better explanation, look at this code snippet
+
 ## Vue.js
 
 ### Using $nextTick built-in function
