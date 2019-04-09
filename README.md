@@ -122,7 +122,7 @@ That's because when a empty string is evaluated in a boolean expression it will 
 
 ### Be careful using Object.assign
 
-Probabily we had used the `Object.assign` function to create a clone of an object. But, what you propabily didn't is that this function doesn't make a deep clone of a object. For a better explanation, look at this code snippet:
+Probabily we had used the `Object.assign` function to create a clone of an object. But, what you propabily didn't know is that this function doesn't make a deep clone of an object. For a better explanation, look at this code snippet:
 
 ```js
 let brazil = {
