@@ -171,7 +171,7 @@ const cloneObject = (obj) => {
   let clone = {};
   for(let i in obj) {
     if(obj[i] !== null && typeof(obj[i]) === 'object') {
-      clone[i] = cloneObject(obj[i]);
+      clone[i] = cloneObject(obj[i])
       continue
     }
     clone[i] = obj[i]
