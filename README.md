@@ -180,6 +180,8 @@ const cloneObject = (obj) => {
 }
 
 ```
+
+Other alternative is using the function `cloneDeep`, available by [lodash](https://lodash.com/docs/4.17.11#cloneDeep).
 ## Vue.js
 
 ### Using $nextTick built-in function
