@@ -219,4 +219,6 @@ onClick: function () {
 ```
 ## Useful tools
 
-[You Might Not Need](https://youmightnotneed.com)
+* [You Might Not Need](https://youmightnotneed.com)
+* [The Evolution of the Web](http://www.evolutionoftheweb.com)
+* [RunKit + npm](https://npm.runkit.com)
