@@ -220,6 +220,60 @@ onClick: function () {
 ## Vuetify
 ### Unexpected recursion
 Recentily I started using [Vuetify](https://vuetifyjs.com/en/) to build UI to web applications. One of the most useful components provided by Vuetify is the [data tables](https://vuetifyjs.com/en/components/data-tables#data-tables). The data table allows you to create a column to show some icons or buttons that give to the user the possibility to perform some actions for a record. For example, look at this: https://vuetifyjs.com/en/components/data-tables#crud-actions
+
+The example table has a column named **actions**. That column shows two icons that allows user edit or delete a single record. When the user click on the icon to edit a record, a modal window is shown. This could be done with the code shown bellow:
+
+```html
+<v-dialog
+  max-width="512px"
+  v-model="dialog"
+>
+  <template
+    v-slot:activator="{ on }"
+  >
+    <v-icon
+      v-on="on"
+    >mdi-pencil
+    </v-icon>
+  </template>
+  <v-card>
+    <!-- form html -->
+  </v-card>
+</v-dialog>
+```
+
+Look, the icon is inside the activator slot of the dialog and has the property `v-on`. So, when the user click in the icon the dialog window will be shown. That's nice. But, sometime we want hide the icon to prevent the user do some fobidden actions for a especific record. Easily we can use the `v-if` inside the `v-icon` component to conditionate if the icon will be shown or not:
+
+```html
+  <v-icon
+    v-on="on"
+    v-if="canEdit"
+  >mdi-pencil
+  </v-icon>
+```
+
+That code will work. But it has a trap: it will fires a recursive call, and raises a **maximum call stack size exceeded** exception. Why? Really, I don't know. But, I know how to solve that: just move the `v-if` directive to the `v-dialog`:
+
+```html
+<v-dialog
+  max-width="512px"
+  v-model="dialog"
+  v-if="canEdit"
+>
+  <template
+    v-slot:activator="{ on }"
+  >
+    <v-icon
+      v-on="on"
+    >mdi-pencil
+    </v-icon>
+  </template>
+  <v-card>
+    <!-- form html -->
+  </v-card>
+</v-dialog>
+```
+
 ## Useful tools
 
 * [You Might Not Need](https://youmightnotneed.com)
