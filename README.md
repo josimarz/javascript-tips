@@ -217,6 +217,9 @@ onClick: function () {
   })
 }
 ```
+## Vuetify
+### Unexpected recursion
+Recentily I started using [Vuetify](https://vuetifyjs.com/en/) to build UI to web applications. One of the most useful components provided by Vuetify is the [data tables](https://vuetifyjs.com/en/components/data-tables#data-tables). The data table allows you to create a column to show some icons or buttons that give to the user the possibility to perform some actions for a record. For example, look at this: https://vuetifyjs.com/en/components/data-tables#crud-actions
 ## Useful tools
 
 * [You Might Not Need](https://youmightnotneed.com)
