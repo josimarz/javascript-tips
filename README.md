@@ -182,6 +182,24 @@ const cloneObject = (obj) => {
 ```
 
 Other alternative is using the function `cloneDeep`, available by [lodash](https://lodash.com/docs/4.17.11#cloneDeep).
+
+### Casting string to integer
+Do you konw the `parseInt` function? You can use that function to cast strings to integer numbers, like this:
+
+```js
+const s = '24';
+const i = parseInt(s);
+```
+
+But, you also can cast to integer using the `+` operator, like this:
+
+```js
+const s = '24';
+const i = +s;
+```
+
+Much better!
+
 ## Vue.js
 
 ### Using $nextTick built-in function
